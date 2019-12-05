@@ -1,0 +1,22 @@
+.easy-zoom-inline{
+	display: inline-block;
+}
+.easy-zoom-container {
+  position: relative;
+  margin: auto;
+  overflow: hidden; 
+}
+.easy-zoom-full-image {
+  position: absolute;
+  max-width: none;
+  max-height: none;
+  display: none;
+}
+.easy-zoom-wrp {
+  position: absolute;
+  overflow: hidden;
+}
+.easy-zoom-wrp.easy-zoom-lens {
+  border: 3px solid #000;
+  cursor: crosshair;
+}

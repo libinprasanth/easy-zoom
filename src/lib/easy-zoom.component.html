@@ -1,0 +1,25 @@
+<div #viewContainer class="easy-zoom-inline">
+  <div #zoomContainer class="easy-zoom-container"> 
+    <img #imageThumbnail class="easy-zoom-small-image" src="{{ thumbImage }}"
+    (load)="onThumbImageLoaded()" alt="{{ imageTitle }}"/>
+    <div [ngClass]="{'easy-zoom-wrp': true, 'easy-zoom-lens': this.enableLens}"
+    [style.display]="this.display"
+    [style.top.px]="this.lensTop"
+    [style.left.px]="this.lensLeft"
+    [style.width.px]="this.lensWidth"
+    [style.height.px]="this.lensHeight"
+    [style.border-radius.px]="this.lensBorderRadius"
+    [style.border-color]="this.lensColor"
+    >    
+    <img #fullSizeImage class="easy-zoom-full-image" src="{{ fullImage }}"
+    (load)="onFullImageLoaded()"
+    [style.display]="this.display"
+    [style.top.px]="this.fullImageTop"
+    [style.left.px]="this.fullImageLeft"
+    [style.width.px]="this.magnifiedWidth"
+    [style.height.px]="this.magnifiedHeight"
+    alt="{{ imageTitle }}"
+    />
+  </div>
+</div>
+</div>
